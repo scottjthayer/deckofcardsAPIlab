@@ -1,0 +1,16 @@
+﻿@model CardModel
+@{
+}
+<div>
+    <h1>@Model.remaining</h1>
+</div>
+@foreach(Card c in Model.cards)
+            {
+                <div>
+                    <h2>
+                        @c.value of @c.suit
+                    </h2>
+                    <img height="250" width="130" src="@c.image" />
+                </div>
+            }
+<a class="btn btn-light" href="/Home/DrawCards">Draw again?</a>
